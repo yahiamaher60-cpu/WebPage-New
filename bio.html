@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biography - Bill Gates</title>
+
+<style>
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #0b3d91;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #0b3d91;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.nav-links a:hover {
+  background: #0b3d91;
+  color: white;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #0b3d91;
+  margin: 4px;
+  transition: 0.3s;
+}
+
+/* Section */
+section {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Image */
+img {
+  display: block;
+  margin: 20px auto;
+  max-width: 90%;
+  border-radius: 10px;
+  transition: transform 0.6s ease-in-out;
+  cursor: pointer;
+}
+
+img:hover {
+  transform: scale(1.2);
+}
+
+/* Buttons */
+.btn-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.back-btn,
+.next-btn {
+  padding: 12px 25px;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.back-btn {
+  background: #6c757d;
+}
+
+.back-btn:hover {
+  background: #5a6268;
+}
+
+.next-btn {
+  background: #0b3d91;
+}
+
+.next-btn:hover {
+  background: #092f6f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(255,255,255,0.95);
+    flex-direction: column;
+    justify-content: center; /* توسيط عمودي */
+    align-items: center;     /* توسيط أفقي */
+    gap: 20px;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 1.5rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Bill Gates Biography</h1>
+</header>
+
+<nav class="navbar">
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="nav-links" id="navLinks">
+    <a href="bio.html">Biography</a>
+    <a href="early.html">Early Life</a>
+    <a href="harvard.html">Harvard & Microsoft</a>
+    <a href="hq.html">Microsoft HQ</a>
+    <a href="msdos.html">MS-DOS</a>
+    <a href="windows.html">Windows Empire</a>
+    <a href="philanthropy.html">Philanthropy</a>
+    <a href="stepaway.html">Stepping Away</a>
+  </div>
+</nav>
+
+<section>
+<p><strong>Bill Gates</strong> is a prominent American entrepreneur and philanthropist, best known for cofounding Microsoft Corporation, the world's largest software company. </p>
+<p>in Seattle, Washington, Gates exhibited an early aptitude for technology, writing his first computer program at the age of thirteen</p>
+<p> After briefly attending Harvard University, he dropped out to pursue a software development venture with his friend Paul Allen, leading to the
+ creation of Microsoft. Under Gates's leadership, Microsoft revolutionized personal computing with products like
+MS-DOS and the Windows operating system, making him one of the youngest billionaires in history.</p>
+<p><strong>Full Name:</strong> William Henry Gates III</p>
+<p><strong>Date and Place of Birth:</strong> October 28, 1955, in Seattle, Washington, USA.</p>
+<p><strong>Family Background:</strong> He grew up in an upper-middle-class family and was the second of three children.</p>
+<p><strong>Father:</strong> William H. Gates Sr., was a prominent lawyer.</p>
+<p><strong>Mother:</strong> Mary Maxwell Gates, was a teacher and a member of boards of major companies and universities.</p>
+<p><strong>Kristi Gates:</strong> Older sister</p>
+<p><strong>Libby Gates:</strong> Younger sister</p>
+<p>Bill Gates is the second of his parents' three children.</p>
+
+<img src="https://i.postimg.cc/MG6TNFQ2/151068-ʿaylt-byl-jyts.webp" alt="Bill Gates Family">
+
+<div class="btn-container">
+  <a href="javascript:history.back()" class="back-btn">← Back</a>
+  <a href="early.html" class="next-btn">Next: Early Life →</a>
+</div>
+</section>
+
+<script>
+function toggleMenu() {
+  const navLinks = document.getElementById('navLinks');
+  navLinks.classList.toggle('active');
+}
+</script>
+
+</body>
+</html>

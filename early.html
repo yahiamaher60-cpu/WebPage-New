@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Early Life - Bill Gates</title>
+
+<style>
+/* ===== Global Styles ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* ===== Header ===== */
+header {
+  background: #0b3d91;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===== Navigation ===== */
+.navbar {
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #0b3d91;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.nav-links a:hover {
+  background: #0b3d91;
+  color: #fff;
+}
+
+/* ===== Hamburger Button ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #0b3d91;
+  margin: 4px;
+  transition: 0.3s;
+}
+
+/* ===== Section ===== */
+section {
+  background: #ffffff;
+  margin: 20px auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+section h3 {
+  margin-top: 20px;
+  color: #0b3d91;
+}
+
+/* ===== Image ===== */
+img {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* ===== Buttons ===== */
+.btn-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.back-btn,
+.next-btn {
+  padding: 12px 25px;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.back-btn {
+  background: #6c757d;
+}
+
+.back-btn:hover {
+  background: #5a6268;
+}
+
+.next-btn {
+  background: #0b3d91;
+}
+
+.next-btn:hover {
+  background: #092f6f;
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 1.5rem;
+    padding: 12px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Early Life</h1>
+</header>
+
+<nav class="navbar">
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="nav-links" id="navLinks">
+    <a href="bio.html">Biography</a>
+    <a href="early.html">Early Life</a>
+    <a href="harvard.html">Harvard & Microsoft</a>
+    <a href="hq.html">Microsoft HQ</a>
+    <a href="msdos.html">MS-DOS</a>
+    <a href="windows.html">Windows Empire</a>
+    <a href="philanthropy.html">Philanthropy</a>
+    <a href="stepaway.html">Stepping Away</a>
+  </div>
+</nav>
+
+<section>
+  <p><strong>School:</strong> Bill Gates attended the private and distinguished Lakeside School in Seattle.</p>
+
+  <h3>1. Discovering the Computer 💻</h3>
+  <p>Lakeside had one of the few computers at the time. Gates and Paul Allen became obsessed and spent all free time programming.</p>
+
+  <h3>2. The Historic Partnership 🤝</h3>
+  <p>Meeting Paul Allen at Lakeside School. Gates focused on analytical skills, while Allen focused on futuristic thinking.</p>
+
+  <h3>3. Early Projects</h3>
+  <p>They wrote early programs including a Tic-Tac-Toe game and a school scheduling system.</p>
+
+  <h3>4. The Future Vision ✨</h3>
+  <p>Gates and Allen realized that personal computers would eventually be available for everyone.</p>
+
+  <img src="https://i.postimg.cc/FRqHfFnS/billgatespaulallen.jpg" alt="Bill Gates and Paul Allen at Lakeside School in 1970">
+
+  <p>The period at Lakeside shaped Gates’ relationship with technology and sparked the foundation of Microsoft.</p>
+
+  <div class="btn-container">
+    <a href="bio.html" class="back-btn">← Back</a>
+    <a href="harvard.html" class="next-btn">Next: Harvard →</a>
+  </div>
+</section>
+
+<script>
+function toggleMenu() {
+  const navLinks = document.getElementById('navLinks');
+  navLinks.classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
