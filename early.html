@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Biography - Bill Gates</title>
+<title>Early Life - Bill Gates</title>
 
 <style>
+/* ===== Global Styles ===== */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -14,15 +15,15 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
+/* ===== Header ===== */
 header {
   background: #0b3d91;
-  color: white;
+  color: #ffffff;
   text-align: center;
   padding: 20px;
 }
 
-/* Navbar */
+/* ===== Navigation ===== */
 .navbar {
   background: #ffffff;
   display: flex;
@@ -51,10 +52,10 @@ header {
 
 .nav-links a:hover {
   background: #0b3d91;
-  color: white;
+  color: #fff;
 }
 
-/* Hamburger */
+/* ===== Hamburger Button ===== */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -69,9 +70,9 @@ header {
   transition: 0.3s;
 }
 
-/* Section */
+/* ===== Section ===== */
 section {
-  background: white;
+  background: #ffffff;
   margin: 20px auto;
   padding: 20px;
   width: 90%;
@@ -80,21 +81,21 @@ section {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Image */
+section h3 {
+  margin-top: 20px;
+  color: #0b3d91;
+}
+
+/* ===== Image ===== */
 img {
   display: block;
   margin: 20px auto;
-  max-width: 90%;
+  max-width: 100%;
+  height: auto;
   border-radius: 10px;
-  transition: transform 0.6s ease-in-out;
-  cursor: pointer;
 }
 
-img:hover {
-  transform: scale(1.2);
-}
-
-/* Buttons */
+/* ===== Buttons ===== */
 .btn-container {
   margin-top: 30px;
   display: flex;
@@ -106,7 +107,7 @@ img:hover {
 .back-btn,
 .next-btn {
   padding: 12px 25px;
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
@@ -128,21 +129,14 @@ img:hover {
   background: #092f6f;
 }
 
-/* Responsive */
+/* ===== Responsive Styles ===== */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    background: rgba(255,255,255,0.95);
     flex-direction: column;
-    justify-content: center; /* توسيط عمودي */
-    align-items: center;     /* توسيط أفقي */
-    gap: 20px;
-    z-index: 1000;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
   }
 
   .nav-links.active {
@@ -151,6 +145,7 @@ img:hover {
 
   .nav-links a {
     font-size: 1.5rem;
+    padding: 12px 0;
   }
 
   .hamburger {
@@ -159,10 +154,11 @@ img:hover {
 }
 </style>
 </head>
+
 <body>
 
 <header>
-<h1>Bill Gates Biography</h1>
+  <h1>Early Life</h1>
 </header>
 
 <nav class="navbar">
@@ -172,7 +168,7 @@ img:hover {
     <div></div>
   </div>
   <div class="nav-links" id="navLinks">
-    <a href="bio.html">Biography</a>
+    <a href="bio.html">Introduction</a>
     <a href="early.html">Early Life</a>
     <a href="harvard.html">Harvard & Microsoft</a>
     <a href="hq.html">Microsoft HQ</a>
@@ -184,21 +180,43 @@ img:hover {
 </nav>
 
 <section>
-<p><strong>Full Name:</strong> William Henry Gates III</p>
-<p><strong>Date and Place of Birth:</strong> October 28, 1955, in Seattle, Washington, USA.</p>
-<p><strong>Family Background:</strong> He grew up in an upper-middle-class family and was the second of three children.</p>
-<p><strong>Father:</strong> William H. Gates Sr., was a prominent lawyer.</p>
-<p><strong>Mother:</strong> Mary Maxwell Gates, was a teacher and a member of boards of major companies and universities.</p>
-<p><strong>Kristi Gates:</strong> Older sister</p>
-<p><strong>Libby Gates:</strong> Younger sister</p>
-<p>Bill Gates is the second of his parents' three children.</p>
+<h3>Bill Gates' Childhood</h3>
+  <p><strong>Henry Gates III</strong>, widely known as Bill Gates, born in Seattle. He was named after his father, William H.
+      Gates II, who was a lawyer. His mother, Mary Maxwell Gates, worked briefly as a teacher before devoting her time
+      to raising the couple’s children and working on numerous nonprofit and corporate boards of directors. She was the
+      first woman to sit on the board for First Interstate Bank of Washington and the first female chair of United Way
+      International.</p>
 
-<img src="https://i.postimg.cc/MG6TNFQ2/151068-ʿaylt-byl-jyts.webp" alt="Bill Gates Family">
+  <p> Young Bill grew up in an upper-middle-class family with his older sister, Kristianne, and younger sister, Libby.
+      All three children were encouraged to be competitive and strive for excellence. Bill showed early signs of
+      competitiveness when he coordinated family athletic games at their summer house on Puget Sound. He also relished
+      in playing board games and excelled at Risk and Monopoly.</p>
+      
+  <p><strong>School:</strong> In the seventh grade, Gates transferred to Lakeside School, an elite private
+      institution. It was at Lakeside, at age thirteen. He formed a close friendship with Paul Allen, a like-minded
+      student two years his senior.</p>
 
-<div class="btn-container">
-  <a href="javascript:history.back()" class="back-btn">← Back</a>
-  <a href="early.html" class="next-btn">Next: Early Life →</a>
-</div>
+  <h3>1. Discovering the Computer </h3>
+  <p>Lakeside had one of the few computers at the time. Gates and Paul Allen became obsessed and spent all free time programming.</p>
+
+  <h3>2. The Historic Partnership </h3>
+  <p>Meeting Paul Allen at Lakeside School. Gates focused on analytical skills, while Allen focused on futuristic thinking.</p>
+
+  <h3>3. Early Projects</h3>
+  <p>They wrote early programs including a Tic-Tac-Toe game and a school scheduling system.</p>
+
+  <h3>4. The Future Vision </h3>
+  <p>Gates and Allen realized that personal computers would eventually be available for everyone.</p>
+
+  <img src="https://i.postimg.cc/FRqHfFnS/billgatespaulallen.jpg" alt="Bill Gates and Paul Allen at Lakeside School in 1970">
+
+ <p>The period at Lakeside shaped Gates’ relationship with technology and sparked the foundation of Microsoft, where
+      great fate awaits for him.</p>
+
+  <div class="btn-container">
+    <a href="bio.html" class="back-btn">← Back</a>
+    <a href="harvard.html" class="next-btn">Next: Harvard →</a>
+  </div>
 </section>
 
 <script>

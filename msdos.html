@@ -1,212 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MS-DOS - Microsoft</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MS-DOS - Microsoft</title>
 
-<style>
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f5f5f5;
-  line-height: 1.6;
-}
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      line-height: 1.6;
+    }
 
-/* Header */
-header {
-  background: #0b3d91;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
+    /* Header */
+    header {
+      background: #0b3d91;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
 
-/* Navbar */
-.navbar {
-  background: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
+    /* Navbar */
+    .navbar {
+      background: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-.nav-links {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
+    .nav-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
 
-.nav-links a {
-  text-decoration: none;
-  color: #0b3d91;
-  font-weight: bold;
-  padding: 8px 12px;
-  border-radius: 6px;
-}
+    .nav-links a {
+      text-decoration: none;
+      color: #0b3d91;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
 
-.nav-links a:hover {
-  background: #0b3d91;
-  color: white;
-}
+    .nav-links a:hover {
+      background: #0b3d91;
+      color: white;
+    }
 
-/* Hamburger */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
 
-.hamburger div {
-  width: 25px;
-  height: 3px;
-  background-color: #0b3d91;
-  margin: 4px;
-  transition: 0.3s;
-}
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #0b3d91;
+      margin: 4px;
+      transition: 0.3s;
+    }
 
-/* Section */
-section {
-  background: white;
-  margin: 20px auto;
-  padding: 20px;
-  width: 90%;
-  max-width: 1000px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  text-align: center;
-}
+    /* Section */
+    section {
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 1000px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
 
-section img {
-  width: 100%; /* تكبير الصورة بعرض القسم */
-  height: auto;
-  border-radius: 10px;
-  margin: 15px 0;
-  image-rendering: auto; /* يحافظ على جودة الصورة */
-}
+    section img {
+      width: 100%;
+      /* تكبير الصورة بعرض القسم */
+      height: auto;
+      border-radius: 10px;
+      margin: 15px 0;
+      image-rendering: auto;
+      /* يحافظ على جودة الصورة */
+    }
 
-/* Buttons */
-.btn-container {
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-between; /* Back على الشمال وNext على اليمين */
-  gap: 10px;
-  flex-wrap: wrap;
-}
+    /* Buttons */
+    .btn-container {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      /* Back على الشمال وNext على اليمين */
+      gap: 10px;
+      flex-wrap: wrap;
+    }
 
-.back-btn,
-.next-btn {
-  padding: 12px 25px;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-}
+    .back-btn,
+    .next-btn {
+      padding: 12px 25px;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
 
-.back-btn {
-  background: #6c757d;
-}
+    .back-btn {
+      background: #6c757d;
+    }
 
-.back-btn:hover {
-  background: #5a6268;
-}
+    .back-btn:hover {
+      background: #5a6268;
+    }
 
-.next-btn {
-  background: #0b3d91;
-}
+    .next-btn {
+      background: #0b3d91;
+    }
 
-.next-btn:hover {
-  background: #06285b;
-}
+    .next-btn:hover {
+      background: #06285b;
+    }
 
-/* Responsive for Mobile */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    background: rgba(255,255,255,0.95);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    z-index: 1000;
-  }
+    /* Responsive for Mobile */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        z-index: 1000;
+      }
 
-  .nav-links.active {
-    display: flex;
-  }
+      .nav-links.active {
+        display: flex;
+      }
 
-  .nav-links a {
-    font-size: 1.5rem;
-  }
+      .nav-links a {
+        font-size: 1.5rem;
+      }
 
-  .hamburger {
-    display: flex;
-  }
+      .hamburger {
+        display: flex;
+      }
 
-  .btn-container {
-    flex-direction: column;
-    align-items: stretch;
-  }
-}
-</style>
+      .btn-container {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <h1>MS-DOS: The Early Microsoft Operating System</h1>
-</header>
+  <header>
+    <h1>MS-DOS: The Early Microsoft Operating System</h1>
+  </header>
 
-<nav class="navbar">
-  <div class="hamburger" onclick="toggleMenu()">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  <div class="nav-links" id="navLinks">
-    <a href="bio.html">Biography</a>
-    <a href="early.html">Early Life</a>
-    <a href="harvard.html">Harvard & Microsoft</a>
-    <a href="hq.html">Microsoft HQ</a>
-    <a href="msdos.html">MS-DOS</a>
-    <a href="windows.html">Windows Empire</a>
-    <a href="philanthropy.html">Philanthropy</a>
-    <a href="stepaway.html">Stepping Away</a>
-  </div>
-</nav>
+  <nav class="navbar">
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="bio.html">Introduction</a>
+      <a href="early.html">Early Life</a>
+      <a href="harvard.html">Harvard & Microsoft</a>
+      <a href="hq.html">Microsoft HQ</a>
+      <a href="msdos.html">MS-DOS</a>
+      <a href="windows.html">Windows Empire</a>
+      <a href="philanthropy.html">Philanthropy</a>
+      <a href="stepaway.html">Stepping Away</a>
+    </div>
+  </nav>
 
-<section>
-  <p>
-    MS-DOS (Microsoft Disk Operating System) was the foundation of Microsoft's success in the 1980s.
-  </p>
+  <section>
+    <p>
+      <b>MS-DOS</b> (which stands for <b>Microsoft Disk Operating System</b>) is an operating system which first came out in 1981 and
+      was designed to run on PC compatible computers.
+      It was primarily used as the main operating system on PCs until
+      1995, when Windows 95 overtook it as the most popular OS of choice.</p>
+    <p>
+      <b>MS-DOS</b> was not originally created by Microsoft. Instead, <b>IBM</b> approached Microsoft to provide an operating system for
+      its new personal computer. Microsoft acquired an existing OS called 86-DOS from Seattle Computer Products, modified it,
+      and rebranded it as MS-DOS for IBM's use.</p>
 
-  <!-- الصورة الجديدة من Postimg -->
-  <img src="https://i.postimg.cc/QVZNb4DN/Getty-Images-90738405-1024x648.jpg" alt="MS-DOS Operating System">
+    <img src="https://i.postimg.cc/QVZNb4DN/Getty-Images-90738405-1024x648.jpg" alt="MS-DOS Operating System">
 
-  <p>
-    It was a command-line operating system widely used in IBM PCs and compatible computers.
-  </p>
+    <p>
+      <b>MS-DOS</b> marked a turning point for Microsoft and the entire computer industry. When <b>IBM needed</b> an operating system
+      for its new PC, Microsoft provided what became <b>MS-DOS</b>, but the crucial detail was that Microsoft
+      kept the licensing rights.</p>
 
-  <div class="btn-container">
-    <a href="hq.html" class="back-btn">← Back</a>
-    <a href="windows.html" class="next-btn">Next: Windows Empire →</a>
-  </div>
-</section>
+    <p>This meant the company could sell the system to other manufacturers as well, allowing
+      <b>MS-DOS</b> to spread rapidly across the growing PC market. That strategic decision helped establish Microsoft as a
+      dominant force in personal computing for decades.
+    </p>
 
-<script>
-function toggleMenu() {
-  const navLinks = document.getElementById('navLinks');
-  navLinks.classList.toggle('active');
-}
-</script>
+    <div class="btn-container">
+      <a href="hq.html" class="back-btn">← Back</a>
+      <a href="windows.html" class="next-btn">Next: Windows Empire →</a>
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+  </script>
 
 </body>
+
 </html>

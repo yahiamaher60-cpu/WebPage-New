@@ -1,182 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stepping Away - Bill Gates</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stepping Away - Bill Gates</title>
 
-<style>
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f5f5f5;
-  line-height: 1.6;
-}
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      line-height: 1.6;
+    }
 
-/* Header */
-header {
-  background: #0b3d91;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
+    /* Header */
+    header {
+      background: #0b3d91;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
 
-/* Navbar */
-.navbar {
-  background: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
+    /* Navbar */
+    .navbar {
+      background: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-.nav-links {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
+    .nav-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
 
-.nav-links a {
-  text-decoration: none;
-  color: #0b3d91;
-  font-weight: bold;
-  padding: 8px 12px;
-  border-radius: 6px;
-}
+    .nav-links a {
+      text-decoration: none;
+      color: #0b3d91;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
 
-.nav-links a:hover {
-  background: #0b3d91;
-  color: white;
-}
+    .nav-links a:hover {
+      background: #0b3d91;
+      color: white;
+    }
 
-/* Hamburger */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
 
-.hamburger div {
-  width: 25px;
-  height: 3px;
-  background-color: #0b3d91;
-  margin: 4px;
-  transition: 0.3s;
-}
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #0b3d91;
+      margin: 4px;
+      transition: 0.3s;
+    }
 
-/* Section */
-section {
-  background: white;
-  margin: 20px auto;
-  padding: 20px;
-  width: 90%;
-  max-width: 900px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
+    /* Section */
+    section {
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 900px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
 
-/* Buttons */
-.btn-container {
-  margin-top: 30px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
+    section h2,
+    section h3 {
+      color: #0b3d91;
+      margin-top: 20px;
+    }
 
-.back-btn {
-  padding: 12px 25px;
-  background: #6c757d;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-}
+    ul {
+      padding-left: 1.5em;
+    }
 
-.back-btn:hover {
-  background: #5a6268;
-}
+    ul li {
+      margin-bottom: 10px;
+    }
 
-/* Responsive for Mobile */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    background: rgba(255,255,255,0.95);
-    flex-direction: column;
-    justify-content: center; /* عمودي وسط */
-    align-items: center;     /* أفقي وسط */
-    gap: 20px;
-    z-index: 1000;
-  }
+    /* Buttons */
+    .btn-container {
+      margin-top: 30px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
 
-  .nav-links.active {
-    display: flex;
-  }
+    .back-btn {
+      padding: 12px 25px;
+      background: #6c757d;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
 
-  .nav-links a {
-    font-size: 1.5rem;
-  }
+    .back-btn:hover {
+      background: #5a6268;
+    }
 
-  .hamburger {
-    display: flex;
-  }
-}
-</style>
+    /* Responsive for Mobile */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        /* عمودي وسط */
+        align-items: center;
+        /* أفقي وسط */
+        gap: 20px;
+        z-index: 1000;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        font-size: 1.5rem;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-<h1>Stepping Away from Microsoft</h1>
-</header>
+  <header>
+    <h1>Stepping Away from Microsoft</h1>
+  </header>
 
-<nav class="navbar">
-  <div class="hamburger" onclick="toggleMenu()">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  <div class="nav-links" id="navLinks">
-    <a href="bio.html">Biography</a>
-    <a href="early.html">Early Life</a>
-    <a href="harvard.html">Harvard & Microsoft</a>
-    <a href="hq.html">Microsoft HQ</a>
-    <a href="msdos.html">MS-DOS</a>
-    <a href="windows.html">Windows Empire</a>
-    <a href="philanthropy.html">Philanthropy</a>
-    <a href="stepaway.html">Stepping Away</a>
-  </div>
-</nav>
+  <nav class="navbar">
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="bio.html">Introduction</a>
+      <a href="early.html">Early Life</a>
+      <a href="harvard.html">Harvard & Microsoft</a>
+      <a href="hq.html">Microsoft HQ</a>
+      <a href="msdos.html">MS-DOS</a>
+      <a href="windows.html">Windows Empire</a>
+      <a href="philanthropy.html">Philanthropy</a>
+      <a href="stepaway.html">Stepping Away</a>
+    </div>
+  </nav>
 
-<section>
-<p>
-In 2008, Bill Gates fully dedicated himself to philanthropy,
-focusing on climate change and epidemic research.
-</p>
-<p>
-He continues to contribute to global health, technology solutions, and education initiatives.
-</p>
+  <section>
+    <h2>Giving up the CEO Role (January 2000)</h2>
+    <p>At the height of the antitrust legal battles, Gates stepped down as CEO of Microsoft in January 2000.</p>
+    <ul>
+      <li><strong>The Successor:</strong> He handed the reins to his college friend, Steve Ballmer, who had been with
+        the company since 1980.</li>
+      <li><strong>New Role:</strong> Gates didn't leave; he created a new title for himself: "Chief Software Architect."
+        This allowed him to focus purely on product strategy and code without the burden of running the business side
+      </li>
+    </ul>
 
-<div class="btn-container">
-  <a href="javascript:history.back()" class="back-btn">← Back</a>
-  <a href="bio.html" class="back-btn">Back to Biography →</a>
-</div>
-</section>
+    <h2>The End of Daily Work (June 2008)</h2>
+    <p>Gates stepped down from his full-time day-to-day role at Microsoft.</p>
+    <ul>
+      <li><strong>The Reason:</strong> He wanted to dedicate the majority of his time to the Bill & Melinda Gates
+        Foundation.</li>
+      <li><strong>The "Last Day":</strong> His final full-time day was June 27, 2008. Microsoft released a famous comedy
+        video for his retirement featuring celebrities like George Clooney and Bono trying to find Gates a new hobby.
+      </li>
+      <li><strong>Status:</strong> He remained Chairman of the Board, meaning he still led the group that fired/hired
+        the CEO.</li>
+    </ul>
+    <h2>Stepping Down as Chairman (February 2014)</h2>
+    <p>When Steve Ballmer retired and Satya Nadella was named the new CEO, Gates stepped down as Chairman of the Board.
+    </p>
+    <ul>
+      <li><strong>New Role:</strong> He took the title "Technology Advisor," promising to help Nadella with product
+        development. This was largely symbolic, signaling that the "Gates/Ballmer Era" was officially over and it was
+        now Nadella's company.</li>
+    </ul>
+    <h2>The Final Departure (March 2020)</h2>
+    <p>Gates resigned from the Microsoft Board of Directors entirely.</p>
+    <ul>
+      <li><strong>Offical Reason</strong> He stated he wanted to dedicate his time fully to philanthropy (global health,
+        education, and climate change).</li>
+      <li><strong>Behind The Scenes</strong> In 2021, The Wall Street Journal reported that before his resignation, the
+        board had hired a law firm to investigate a romantic relationship Gates had with an employee years prior. Gates
+        resigned before the investigation was concluded, though his spokesperson said the decision to leave was
+        unrelated to the inquiry.</li>
+    </ul>
 
-<script>
-function toggleMenu() {
-  const navLinks = document.getElementById('navLinks');
-  navLinks.classList.toggle('active');
-}
-</script>
+    <div class="btn-container">
+      <a href="javascript:history.back()" class="back-btn">← Back</a>
+      <a href="bio.html" class="back-btn">Back to Biography →</a>
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+  </script>
 
 </body>
+
 </html>
